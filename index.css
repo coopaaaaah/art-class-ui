@@ -1,0 +1,8 @@
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.col-4 {
+    width: 25%;
+}
