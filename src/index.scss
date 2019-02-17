@@ -1,0 +1,29 @@
+.app {
+    
+    padding-top: 40;
+    text-align: center;
+
+    .flex-row {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .flex-column {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .flex-row-center-single-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-4 {
+        width: 33%;
+    }
+}
