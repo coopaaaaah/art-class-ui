@@ -4,10 +4,10 @@ import './index.scss';
 
 export class App extends React.Component {
 
-    createListItems = (sizeOfArray, itemClass) => {
+    createListItems = (sizeOfArray, childContainerClass, childClass) => {
         return [...Array(sizeOfArray).keys()].map((number, index) =>
-            <div key={index} className={itemClass}>
-                Child {number}
+            <div key={index} className={childContainerClass}>
+                <div className={childClass}> Child {number} </div>
             </div>
         );
     }
@@ -31,8 +31,8 @@ export class App extends React.Component {
                 </div>
 
                 <h2>Four Boxes with Centered Content</h2>
-                <div className='flex-box'>
-                    {this.createListItems(4, 'box-item')}
+                <div className='flex-grid'>
+                    {this.createListItems(4, 'box', 'box-item')}
                 </div>
             </div>
         )
