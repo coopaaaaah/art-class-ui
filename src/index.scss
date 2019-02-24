@@ -23,6 +23,19 @@
         align-items: center;
     }
 
+    .flex-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .box-item { 
+        width: 100%;
+        flex: 0 0 50%;
+    }
+
     .item {
         color: black;
         width: 33%;
@@ -33,5 +46,10 @@
         align-self: flex-end;
         color: red;
     }
+
+    .box-item:nth-of-type(even){
+        background-color: red;
+    }
+
 
 }

@@ -2,25 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import './index.scss';
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const listItems = numbers.map((number, index) =>
-    <div key={index} className='item'>
-        Child {number}
-    </div>
-);
-
 export class App extends React.Component {
+
+    createListItems = (sizeOfArray, itemClass) => {
+        return [...Array(sizeOfArray).keys()].map((number, index) =>
+            <div key={index} className={itemClass}>
+                Child {number}
+            </div>
+        );
+    }
+
     render() {
         return (
             <div className='app'>
                 <h2> Flex Reverse Row </h2>
                 <div className='flex-row'>
-                    {listItems}
+                    {this.createListItems(10, 'item')}
                 </div>
 
-                <h2> Flex Reverse Column </h2>
+                <h2> Flex Nth Type Column </h2>
                 <div className='flex-column'>
-                    {listItems}
+                    {this.createListItems(10, 'item')}
                 </div>
 
                 <h2>Centered Item</h2>
@@ -28,6 +30,10 @@ export class App extends React.Component {
                     <div>Centered!</div>
                 </div>
 
+                <h2>Four Boxes with Centered Content</h2>
+                <div className='flex-box'>
+                    {this.createListItems(4, 'box-item')}
+                </div>
             </div>
         )
     }
