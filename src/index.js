@@ -10,7 +10,7 @@ export class App extends React.Component {
                 <div className={childClass}> Child {number} </div>
             </div>
         );
-    }
+    };
 
     render() {
         return (
@@ -33,6 +33,22 @@ export class App extends React.Component {
                 <h2>Four Boxes with Centered Content</h2>
                 <div className='flex-grid'>
                     {this.createListItems(4, 'box', 'box-item')}
+                </div>
+
+                <h2>Split Panel</h2>
+                <div className='container'>
+                    <div className='content'>
+                        <div className='summary'>
+                            <div className='summary-content'>
+                                <p>Hello World</p>
+                            </div>
+                        </div>
+                        <div className='details'>
+                            <div className='details-content'>
+                                <p>Hello World</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

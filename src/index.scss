@@ -58,4 +58,44 @@
         color: tomato;
     }
 
+
+    .container {
+        .content {
+
+            display: flex;
+            justify-content: space-around;
+
+            .summary {
+                width: 60%;
+                box-sizing: border-box;
+                padding: 0.5rem;
+
+                .summary-content {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 0.5rem;
+                    align-items: flex-start;
+                    min-height: 400px;
+                    background: plum;
+                }
+            }
+
+            .details {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0.5rem;
+
+                .details-content {
+                    display: flex;
+                    flex-direction: column;
+                    border-left: 1px solid black;
+                    padding-left: 1rem;
+                    align-items: flex-start;
+                    min-height: 400px;
+                    background: tomato;
+                }
+            }
+        }
+    }
+
 }
