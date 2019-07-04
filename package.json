@@ -25,7 +25,9 @@
     "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
-    "dev": "webpack-dev-server --env.dev",
+    "start:file-server": "docker run -d     -v ~/Desktop/draw\\ this\\?/Veronica/:/web     -p 8080:8080     halverneus/static-file-server:latest",
+    "dev": "webpack-dev-server --env.dev --port 4000",
+    "launch": "npm run start:file-server && npm run dev",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
