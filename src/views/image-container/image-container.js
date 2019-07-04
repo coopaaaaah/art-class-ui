@@ -13,7 +13,7 @@ class ImageContainer extends React.Component {
 
     render() {
         // todo get range to be determined by size of directory
-        let myRandomImageNumber = Math.floor(Math.random() * 20) + 1; 
+        let myRandomImageNumber = Math.floor(Math.random() * 433) + 1; 
         return (
             <img 
             className='image-container' 
